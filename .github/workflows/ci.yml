@@ -26,15 +26,15 @@ jobs:
       working-directory: ./backend
 
     - name: Run backend tests
-      run: npm test
+      run: npm test --verbose
       working-directory: ./backend
 
     - name: Install frontend dependencies
-      run: npm install
+      run: npm install  
       working-directory: ./frontend
 
     - name: Run frontend tests
-      run: npm test
+      run: npm test --verbose
       working-directory: ./frontend
 
     - name: Build Docker images

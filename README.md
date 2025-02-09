@@ -30,7 +30,7 @@ TaskLedger é um projeto **open source** desenvolvido para empresas que buscam *
 Para detalhes completos sobre a arquitetura, consulte [Detalhes da Arquitetura](docs/architecture.md).
 
 ## 📗 Documentação
-📚 Consulte a documentação completa em [`docs/SUMMARY.md`](docs/SUMMARY.md).  
+📚 Consulte a documentação completa em [`docs/SUMMARY.md`](docs/summary.md).  
 
 ## 📥 Instalação
 ```bash
