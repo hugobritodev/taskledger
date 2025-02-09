@@ -40,7 +40,7 @@ jobs:
     #   working-directory: ./frontend
 
     - name: Build Docker images
-      run: docker-compose -f docker-compose.prod.yml build --verbose
+      run: docker compose -f docker-compose.prod.yml build --verbose
 
     - name: Push Docker images
       env:
@@ -48,4 +48,4 @@ jobs:
         DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
       run: |
         echo "${DOCKER_PASSWORD}" | docker login -u "${DOCKER_USERNAME}" --password-stdin
-        docker-compose -f docker-compose.prod.yml push
+        docker compose -f docker-compose.prod.yml push
