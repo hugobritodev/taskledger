@@ -1,0 +1,40 @@
+# docker-compose.prod.yml
+version: '3.8'
+
+services:
+  backend:
+
+    build:
+      context: ./backend
+      dockerfile: Dockerfile.prod  # Usa o Dockerfile.prod para produção
+    ports:
+      - "3000:3000"
+    env_file:
+      - ./backend/.env.prod
+    # Remova volumes para evitar hot-reload em produção
+    # volumes:
+    #   - ./backend:/usr/src/app
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile.prod  # Usa o Dockerfile.prod para produção
+    ports:
+      - "80:80"
+    env_file:
+      - ./frontend/.env.prod
+    # Remova volumes para evitar hot-reload em produção
+    # volumes:
+    #   - ./frontend:/usr/src/app
+
+  db:
+    image: postgres:13
+    ports:
+      - "5432:5432"
+    env_file:
+      - ./backend/.env.prod
+    volumes:
+      - db_data:/var/lib/postgresql/data
+
+volumes:
+  db_data:

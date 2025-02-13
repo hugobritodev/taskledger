@@ -8,9 +8,9 @@ npm-debug.log*
 
 # Environment variables
 backend/.env
-backend/.env.prod
+#backend/.env.prod
 frontend/.env
-frontend/.env.prod
+#frontend/.env.prod
 
 # Build outputs
 dist/
@@ -18,7 +18,7 @@ build/
 
 
 # Docker
-docker-compose.prod.yml
+
 
 # Logs
 logs
