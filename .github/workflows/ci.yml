@@ -40,7 +40,7 @@ jobs:
     #   working-directory: ./frontend
 
     - name: Build Docker images
-      run: docker compose -f docker-compose.prod.yml build --verbose
+      run: docker compose -f docker-compose.prod.yml build
 
     - name: Push Docker images
       env:
